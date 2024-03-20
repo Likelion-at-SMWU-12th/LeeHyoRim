@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 * {
     font-family: "Orbit", sans-serif;
 }
@@ -15,8 +16,10 @@ h1 {
 h2 {
     font-size: 20px;
     margin-top: 40px;
-    background-color: rgba(255, 177, 75, 0.675);
-    padding: 5px 0px 5px 5px;
+    background-color: rgba(124, 141, 255, 0.675);
+    padding: 3px 3px 2px 10px;
+    font-family: "Dongle", sans-serif;
+    font-size: 30px;
 }
 input {
     border: 1px solid #ccc;
@@ -33,13 +36,14 @@ a{
     text-decoration: none;
     color: white;
     background-color: black;
-    padding: 12px;
+    padding: 8px;
     border-radius: 15px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 20px;
+    font-family: "Dongle", sans-serif;
 }
 a:hover {
-    background-color: orange;
+    background-color: rgba(124, 141, 255, 0.675);
     color: black;
 }
 .profilebox{
