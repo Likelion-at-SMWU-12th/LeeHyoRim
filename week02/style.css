@@ -20,6 +20,17 @@ h2 {
 }
 input {
     border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+table {
+    height: 50px;
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none;
     color: white;
     background-color: black;
     padding: 12px;
