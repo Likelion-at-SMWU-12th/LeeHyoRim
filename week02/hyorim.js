@@ -1,4 +1,4 @@
-alert("Welcome to hyorim info page!");
+confirm("Welcome to hyorim info page!");
 const mainbox = document.getElementById("mainbox");
 function darkmode() {
     mainbox.style.backgroundColor = '#262626';
