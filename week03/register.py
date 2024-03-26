@@ -21,10 +21,10 @@ while True:
     else:
         print("'y' 또는 'n'를 입력해주세요.")
 #2
-user = []
+users = []
 
 while True:
-    users = {}
+    user = {}
     
     #아이디 입력
     username = input('ID: ')
