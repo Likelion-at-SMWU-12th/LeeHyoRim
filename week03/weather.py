@@ -1,7 +1,7 @@
 import requests
 import json
 
-city = "Paris"
+city = "Londons"
 apikey = "ded86fad5bbf3a15ab27aa79717d9156"
 lang = "kr"
 
@@ -22,3 +22,5 @@ print("최저 기온은",data["main"]["temp_min"],"입니다.")
 print("최고 기온은",data["main"]["temp_max"],"입니다.")
 print("기압은",data["main"]["pressure"],"입니다.")
 print("습도는",data["main"]["humidity"],"입니다.")
+print("풍향은 ",data["wind"]["deg"],"입니다.")
+print("풍속은 ",data["wind"]["speed"],"입니다.")
