@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'myinsta',
     'users',
     'accounts',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 AUTH_USER_MODEL = 'users.User'
 
