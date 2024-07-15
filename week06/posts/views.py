@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
+from rest_framework.viewsets import ModelViewSet
 
 from django.views.generic import ListView
 from .models import Post
 from .forms import PostBasedForm, PostModelForm
+from .serializers import PostListSerializer, PostModelSerializer, PostRetrieveSerializer
+
+from rest_framework import generics
 # Create your views here.
 
 def index(request):
@@ -73,3 +77,17 @@ def function_view(request):
     elif request.method == "POST    ":
         print(f'request.POST: {request.POST}')
     return render(request, 'view.html')
+
+class PostModelViewSet(ModelViewSet):
+    queryset=Post.objects.all()
+    serializer_class=PostListSerializer
+    
+# 게시글 목록 + 생성
+class PostListCreateView(generics.ListAPIView, generics.CreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostListSerializer
+    
+# 게시글 상세 + 수정 + 삭제
+class PostRetrieveUpdateView(generics.RetrieveAPIView, generics.UpdateAPIView, generics.DestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostRetrieveSerializer
