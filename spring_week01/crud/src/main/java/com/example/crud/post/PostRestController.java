@@ -42,5 +42,24 @@ public class PostRestController{
         logger.info("in read post");
         return this.postList.get(id);
     }
+
+    // 4 게시물 수정
+    // PUT /post/{id}
+    @PutMapping("{id}")
+    public void updatePost(@PathVariable("id") int id, @RequestBody PostDto postDto) {
+        logger.info("in update post");
+        PostDto existingPost = this.postList.get(id);
+        existingPost.setTitle(postDto.getTitle());
+        existingPost.setContent(postDto.getContent());
+        existingPost.setWriter(postDto.getWriter());
+    }
+
+    // 5 게시물 삭제
+    // DELETE /post/{id}
+    @DeleteMapping("{id}")
+    public void deletePost(@PathVariable("id") int id) {
+        logger.info("in delete post");
+        this.postList.remove(id);
+    }
 }
 
